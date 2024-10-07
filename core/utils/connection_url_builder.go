@@ -19,20 +19,20 @@ func ConnectionURLBuilder(n string) (string, error) {
 			"host=%s port=%s user=%s password=%s dbname=%s sslmode=%s",
 			env.GetEnv("DB_HOST", "127.0.0.1"),
 			env.GetEnv("DB_PORT", "5432"),
-			env.GetEnv("DB_USER", "postgres"),
+			env.GetEnv("DB_USERNAME", "postgres"),
 			env.GetEnv("DB_PASSWORD", "postgres"),
-			env.GetEnv("DB_NAME", "webcore"),
+			env.GetEnv("DB_DATABASE", "webcore"),
 			env.GetEnv("DB_SSL_MODE", "disable"),
 		)
 	case "mysql":
 		// URL for Mysql connection.
 		url = fmt.Sprintf(
 			"%s:%s@tcp(%s:%s)/%s",
-			env.GetEnv("DB_USER", "root"),
+			env.GetEnv("DB_USERNAME", "root"),
 			env.GetEnv("DB_PASSWORD", ""),
 			env.GetEnv("DB_HOST", "127.0.0.1"),
 			env.GetEnv("DB_PORT", "3306"),
-			env.GetEnv("DB_NAME", "webcore"),
+			env.GetEnv("DB_DATABASE", "webcore"),
 		)
 	case "redis":
 		// URL for Redis connection.
