@@ -3,7 +3,7 @@ package database
 import (
 	"fmt"
 
-	"github.com/centrex/webcore/core/core/env"
+	"github.com/centrex/webcore/core/env"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )

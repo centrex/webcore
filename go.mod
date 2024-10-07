@@ -1,4 +1,4 @@
-module github.com/centrex/webcore/core
+module github.com/centrex/webcore
 
 go 1.23.2
 
